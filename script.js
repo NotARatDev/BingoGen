@@ -4,6 +4,7 @@ const editButton = document.querySelector("#editButton");
 const tableBody = document.querySelector("tbody");
 const rowInput = document.getElementById("rows");
 const columnInput = document.getElementById("columns");
+const editButtonText = document.getElementById("onoff");
 
 let rowCount = 3;
 let columnCount = 3;
@@ -40,7 +41,7 @@ function generateTable() {
     }
     tableBody.appendChild(row);
   }
-  editButton.textContent = "Editing Off";
+  editButtonText.textContent = "Off";
   editing = false;
 }
 
@@ -65,9 +66,9 @@ function editTable() {
     });
   }
   if (editing) {
-    editButton.textContent = "Editing On";
+    editButtonText.textContent = "On";
   } else {
-    editButton.textContent = "Editing Off";
+    editButtonText.textContent = "Off";
   }
 }
 
